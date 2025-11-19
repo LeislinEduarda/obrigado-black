@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tudo bem — acesso ao seu guia</title>
+  <meta name="description" content="Você recusou a oferta. Tudo bem — siga os passos para acessar seu guia e continuar criando leve." />
+  <meta name="theme-color" content="#1D4D3A">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#1a1a1a;
+      --muted:#6a6a6a;
+      --green:#1D4D3A;
+      --wine:#7C1E28;
+      --pink:#F9C8D2;
+      --border:#ececec;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:14px;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text)}
+    body{font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,"Helvetica Neue",Arial,"Noto Sans";}
+    .page{max-width:820px;margin:0 auto;padding:22px 18px}
+    .card{
+      background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:22px; margin:10px auto;
+    }
+    h1{margin:0 0 8px 0;font-size:clamp(22px,4.5vw,34px);line-height:1.12;letter-spacing:-.01em;color:var(--green)}
+    p{margin:8px 0}
+    .muted{color:var(--muted)}
+    .ok{
+      display:flex;gap:10px;align-items:flex-start;background:#F6FBF8;border:1px solid #dfeee6;
+      border-radius:12px;padding:12px;margin:8px 0 16px 0;
+    }
+    .ok b{color:var(--green)}
+    .steps{list-style:none;margin:12px 0 0 0;padding:0}
+    .steps li{padding-left:28px;position:relative;margin:10px 0}
+    .steps li::before{content:"✅";position:absolute;left:0;top:0}
+    .btns{display:grid;grid-template-columns:1fr;gap:10px;margin-top:16px}
+    .btn{
+      display:flex;align-items:center;justify-content:center;
+      text-decoration:none;text-align:center;border-radius:12px;border:1px solid transparent;
+      padding:14px 18px;font-weight:800
+    }
+    .btn-primary{background:var(--green);color:#fff;border-color:var(--green)}
+    .btn-outline{background:#fff;color:var(--green);border-color:var(--green)}
+    .btn-alert{background:var(--wine);color:#fff;border-color:var(--wine)}
+    .note{font-size:13px;color:var(--muted);text-align:center;margin-top:8px}
+    .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px}
+    .brand{display:block;text-align:center;margin:4px 0 14px}
+    .badge{
+      display:inline-block;background:var(--pink);color:#6b2330;font-weight:800;
+      padding:6px 10px;border-radius:999px;font-size:12px;letter-spacing:.3px;text-transform:uppercase;
+    }
+    @media(min-width:640px){ .btns{grid-template-columns:repeat(3,1fr)} }
+  </style>
+</head>
+<body>
+  <main class="page" role="main">
+    <div class="brand">
+      <span class="badge">Tudo bem 🙂</span>
+    </div>
+
+    <section class="card" aria-labelledby="tudo-bem">
+      <h1 id="tudo-bem">Você recusou a oferta — e tá tudo bem.</h1>
+      <div class="ok">
+        <div>💬</div>
+        <p>
+          Aquela oportunidade não vai se repetir, mas o <b>Estúdio Infinito</b> continua aberto
+          para quem quer <b>criar leve</b> e de um <b>jeito infinito</b>. Enquanto isso, garanta seu acesso ao guia agora:
+        </p>
+      </div>
+
+      <h2 style="margin:0 0 8px 0;font-size:18px;color:#222">Como acessar seu guia</h2>
+      <ul class="steps">
+        <li><b>Procure no seu e-mail</b> por <b>@circle</b> — o assunto costuma conter “veja como acessar” ou “complete seu cadastro”.</li>
+        <li>Se não encontrar, <b>acesse</b> <a href="https://www.conteudoinfinito.com/" target="_blank" rel="noopener">conteudoinfinito.com</a> e clique em <b>“Esqueci minha senha”</b> para recuperar o acesso.</li>
+        <li>Se nada disso funcionar, provavelmente o e-mail foi digitado errado (mesmo com confirmação dupla). <b>Chama no Whats</b> e a gente resolve em minutos.</li>
+      </ul>
+
+      <div class="btns" role="group" aria-label="Ações de acesso e suporte">
+        <a class="btn btn-alert" href="https://wa.me/551151997862?text=Coloquei%20o%20email%20errado%20e%20quero%20suporte%20para%20acessar%20o%20guia" target="_blank" rel="noopener">Falar no Whats agora</a>
+      </div>
+
+      <p class="note">Dica: verifique também a aba Promoções/Spam — às vezes o e-mail do Circle cai lá.</p>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>
 
