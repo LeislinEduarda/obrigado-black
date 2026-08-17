@@ -1396,6 +1396,12 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
   /* ========== STORY BLOCK (natural, sem card) ========== */
   .story {
     margin: 32px auto 8px;
+    max-width: 680px;
+  }
+
+  /* Card 1 — só nas fotos do quem sou eu (brown/mustard) */
+  .story-author {
+    margin: 0 auto 40px;
     max-width: 620px;
   }
 
@@ -1403,9 +1409,13 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    margin: 8px auto 32px;
+    margin: 0 auto 28px;
     max-width: 620px;
-    padding: 10px 0;
+    padding: 24px 22px;
+    background: linear-gradient(135deg, rgba(201, 151, 40, 0.07), rgba(122, 79, 46, 0.04));
+    border: 1.5px solid rgba(122, 79, 46, 0.22);
+    border-radius: 24px;
+    box-shadow: 0 6px 20px rgba(122, 79, 46, 0.05);
   }
 
   .story-photo {
@@ -1467,6 +1477,7 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
     max-width: 620px;
   }
 
+  /* Cards 2, 3, 4 — só na imagem do print (verde suave) */
   .story-print-item {
     display: flex;
     flex-direction: column;
@@ -1479,6 +1490,11 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
     margin: 0;
     max-width: 320px;
     width: 100%;
+    padding: 22px 20px;
+    background: linear-gradient(135deg, rgba(125, 143, 93, 0.07), rgba(125, 143, 93, 0.03));
+    border: 1.5px solid rgba(125, 143, 93, 0.28);
+    border-radius: 22px;
+    box-shadow: 0 6px 20px rgba(125, 143, 93, 0.06);
   }
 
   .story-print img {
@@ -2724,14 +2740,16 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
 
     .stats-impact { grid-template-columns: 1fr; gap: 14px; padding: 22px 0; }
 
-    .story-photos { gap: 12px; margin: 6px auto 26px; max-width: 100%; }
+    .story-photos { gap: 12px; margin: 0 auto 24px; max-width: 100%; padding: 18px 16px; border-radius: 20px; }
     .story-photo { border-radius: 3px; }
     .story-photo:nth-child(1) { transform: rotate(-1.2deg); margin-top: 4px; }
     .story-photo:nth-child(2) { transform: rotate(1.4deg); margin-top: -4px; }
     .story-text { font-size: 15.5px; }
+    .story-author { margin-bottom: 32px; }
 
-    .story-prints { gap: 36px; margin: 26px auto 0; }
-    .story-print { max-width: 260px; }
+    .story-prints { gap: 32px; margin: 26px auto 0; }
+    .story-print-item { gap: 18px; }
+    .story-print { max-width: 260px; padding: 18px 16px; border-radius: 18px; }
     .story-print-context { font-size: 14.5px; }
     .story-print-name { font-size: 14px; }
     .story-print-niche { font-size: 10px; letter-spacing: 0.14em; }
@@ -3081,21 +3099,25 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
 
       <!-- HISTÓRIA (fluida, sem card) -->
       <div class="story">
-        <div class="story-photos">
-          <div class="story-photo">
-            <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/roteiro.webp" alt="Fazendo os roteiros">
+
+        <!-- Card 1: Quem sou eu -->
+        <div class="story-author">
+          <div class="story-photos">
+            <div class="story-photo">
+              <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/roteiro.webp" alt="Fazendo os roteiros">
+            </div>
+            <div class="story-photo">
+              <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/gravar.webp" alt="Gravando reels">
+            </div>
           </div>
-          <div class="story-photo">
-            <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/gravar.webp" alt="Gravando reels">
+
+          <div class="story-text">
+            <p>[PARÁGRAFO 1 — 2 linhas. Ex: "Comecei aplicando esse modelo no meu próprio perfil, sem saber se ia funcionar. Em poucas semanas eu já tinha parado de travar toda manhã."]</p>
+
+            <p>[PARÁGRAFO 2 — 2 linhas. Ex: "Depois de meses vendo funcionar, documentei tudo num Notion e liberei pra outras mulheres que também tavam presas na mesma pergunta."]</p>
+
+            <p>E nesses <em>3 meses</em> que liberei o modelo e revelei o meu segredo, eu vi outras mulheres se libertando da mesma forma:</p>
           </div>
-        </div>
-
-        <div class="story-text">
-          <p>[PARÁGRAFO 1 — 2 linhas. Ex: "Comecei aplicando esse modelo no meu próprio perfil, sem saber se ia funcionar. Em poucas semanas eu já tinha parado de travar toda manhã."]</p>
-
-          <p>[PARÁGRAFO 2 — 2 linhas. Ex: "Depois de meses vendo funcionar, documentei tudo num Notion e liberei pra outras mulheres que também tavam presas na mesma pergunta."]</p>
-
-          <p>E nesses <em>3 meses</em> que liberei o modelo e revelei o meu segredo, eu vi outras mulheres se libertando da mesma forma:</p>
         </div>
 
         <!-- PRINTS orgânicos: um abaixo do outro, com contexto -->
