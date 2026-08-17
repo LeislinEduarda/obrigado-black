@@ -1468,6 +1468,55 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
     padding-bottom: 1px;
   }
 
+  /* Narrativa contínua — parágrafos naturais com prints intercalados */
+  .story-narrative {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: var(--fs-body);
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  .story-narrative p {
+    margin-bottom: 18px;
+  }
+
+  .story-narrative p:last-child {
+    margin-bottom: 0;
+  }
+
+  .story-narrative p em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--berry);
+  }
+
+  .story-narrative p strong {
+    font-weight: 700;
+  }
+
+  .story-narrative .name {
+    font-weight: 700;
+    color: var(--brown);
+  }
+
+  /* Prints ficam standalone dentro da narrativa */
+  .story-narrative .story-print {
+    margin: 32px auto;
+    display: block;
+    max-width: 320px;
+    width: 100%;
+    padding: 22px 20px;
+    background: linear-gradient(135deg, rgba(125, 143, 93, 0.07), rgba(125, 143, 93, 0.03));
+    border: 1.5px solid rgba(125, 143, 93, 0.28);
+    border-radius: 22px;
+    box-shadow: 0 6px 20px rgba(125, 143, 93, 0.06);
+  }
+
+  .story-narrative .story-print:nth-of-type(1) img { transform: rotate(-1.2deg); }
+  .story-narrative .story-print:nth-of-type(2) img { transform: rotate(1deg); }
+  .story-narrative .story-print:nth-of-type(3) img { transform: rotate(-0.6deg); }
+
   /* PRINTS orgânicos: um abaixo do outro, contínuo */
   .story-prints {
     display: flex;
@@ -2747,15 +2796,9 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
     .story-text { font-size: 15.5px; }
     .story-author { margin-bottom: 32px; }
 
-    .story-prints { gap: 32px; margin: 26px auto 0; }
-    .story-print-item { gap: 18px; }
-    .story-print { max-width: 260px; padding: 18px 16px; border-radius: 18px; }
-    .story-print-context { font-size: 14.5px; }
-    .story-print-name { font-size: 14px; }
-    .story-print-niche { font-size: 10px; letter-spacing: 0.14em; }
-    .story-print-item:nth-child(1) .story-print img { transform: rotate(-1deg); }
-    .story-print-item:nth-child(2) .story-print img { transform: rotate(0.8deg); }
-    .story-print-item:nth-child(3) .story-print img { transform: rotate(-0.4deg); }
+    .story-narrative { font-size: 15.5px; }
+    .story-narrative p { margin-bottom: 16px; }
+    .story-narrative .story-print { max-width: 260px; padding: 18px 16px; border-radius: 18px; margin: 28px auto; }
     .impact-cell { border-right: 0; border-bottom: 1px solid var(--hairline); padding-bottom: 14px; flex-direction: row; gap: 12px; justify-content: center; align-items: center; }
     .impact-cell:last-child { border-bottom: 0; padding-bottom: 0; }
     .impact-num { font-size: 32px; }
@@ -3097,10 +3140,10 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
   <section class="sect reveal">
     <div class="container">
 
-      <!-- HISTÓRIA (fluida, sem card) -->
+      <!-- HISTÓRIA (narrativa contínua com prints intercalados) -->
       <div class="story">
 
-        <!-- Card 1: Quem sou eu -->
+        <!-- Card das fotos -->
         <div class="story-author">
           <div class="story-photos">
             <div class="story-photo">
@@ -3110,56 +3153,39 @@ src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
               <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/gravar.webp" alt="Gravando reels">
             </div>
           </div>
-
-          <div class="story-text">
-            <p>[PARÁGRAFO 1 — 2 linhas. Ex: "Comecei aplicando esse modelo no meu próprio perfil, sem saber se ia funcionar. Em poucas semanas eu já tinha parado de travar toda manhã."]</p>
-
-            <p>[PARÁGRAFO 2 — 2 linhas. Ex: "Depois de meses vendo funcionar, documentei tudo num Notion e liberei pra outras mulheres que também tavam presas na mesma pergunta."]</p>
-
-            <p>E nesses <em>3 meses</em> que liberei o modelo e revelei o meu segredo, eu vi outras mulheres se libertando da mesma forma:</p>
-          </div>
         </div>
 
-        <!-- PRINTS orgânicos: um abaixo do outro, com contexto -->
-        <div class="story-prints">
-          <div class="story-print-item">
-            <figure class="story-print">
-              <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/feedback1.webp" alt="Print da @fulana01">
-            </figure>
-            <div class="story-print-body">
-              <div class="story-print-header">
-                <span class="story-print-name">@fulana01</span>
-                <span class="story-print-niche">[nicho — ex: nutricionista]</span>
-              </div>
-              <p class="story-print-context">[TEXTO — 3 a 5 linhas contando a história dela. Ex: A @fulana01 começou com 800 seguidores e travava toda manhã sem saber o que postar. Aplicou o modelo por 30 dias e postou 20 reels seguidos. Passou de <strong>4k seguidores</strong> e me mandou dizendo que finalmente parou de sentir que o Instagram era um peso.]</p>
-            </div>
-          </div>
+        <!-- Narrativa: texto → print → texto → print → texto → print → texto -->
+        <div class="story-narrative">
 
-          <div class="story-print-item">
-            <figure class="story-print">
-              <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/feedback2.webp" alt="Print da @fulana02">
-            </figure>
-            <div class="story-print-body">
-              <div class="story-print-header">
-                <span class="story-print-name">@fulana02</span>
-                <span class="story-print-niche">[nicho — ex: arquiteta]</span>
-              </div>
-              <p class="story-print-context">[TEXTO — 3 a 5 linhas contando a história dela. Ex: Contexto sobre onde ela estava antes, o que aconteceu depois de aplicar o modelo, e qual foi o resultado concreto.]</p>
-            </div>
-          </div>
+          <p>Decidi entregar esse Notion pra quem quer saber como é criar sem ter que <em>decidir tudo</em>.</p>
 
-          <div class="story-print-item">
-            <figure class="story-print">
-              <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/feedback3.webp" alt="Print do @fulano01">
-            </figure>
-            <div class="story-print-body">
-              <div class="story-print-header">
-                <span class="story-print-name">@fulano01</span>
-                <span class="story-print-niche">[nicho específico — ex: professor de inglês]</span>
-              </div>
-              <p class="story-print-context">[TEXTO — 3 a 5 linhas contando a história dele. Ex: Contexto sobre onde ele estava antes, o que aconteceu depois de aplicar o modelo, e qual foi o resultado concreto.]</p>
-            </div>
-          </div>
+          <p>Porque eu mesma passei por essas travas, mesmo depois de conquistar <strong>+180 mil seguidores</strong>.</p>
+
+          <p>Depois que tornei público o meu modelo de reels e me dediquei 100% a ele usando séries de conteúdo, conquistei <strong>60 mil seguidores em menos de 3 meses</strong>. E o melhor: pude ver <em>milhares de criadores conseguindo ser livres</em> da mesma forma.</p>
+
+          <p>Como o caso da <span class="name">Carol</span>, que mesmo com uma filha de 4 anos e um bebê de 5 meses, conseguiu criar <strong>8 vídeos no primeiro dia</strong> com o modelo e já tem mais 7 episódios roteirizados pra gravar na semana seguinte.</p>
+
+          <figure class="story-print">
+            <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/feedback1.webp" alt="Depoimento da Carol">
+          </figure>
+
+          <p>A <span class="name">Thaís</span> conseguiu criar <strong>7 roteiros em 1 hora e meia</strong> depois de comprar o modelo, e finalmente destravou sua criação, mesmo tendo comprado dezenas de cursos caros antes disso.</p>
+
+          <figure class="story-print">
+            <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/feedback2.webp" alt="Depoimento da Thaís">
+          </figure>
+
+          <p>E sei que você pode achar que isso só se aplica a nichos específicos. Por isso quero te apresentar o caso da <span class="name">Samila</span>, que fala para o público de <em>carreiras policiais</em>: no primeiro vídeo feito com o modelo, ela conseguiu <strong>100 mil visualizações</strong> e <strong>2 mil compartilhamentos</strong>.</p>
+
+          <figure class="story-print">
+            <img src="https://raw.githubusercontent.com/LeislinEduarda/obrigado-black/main/feedback3.webp" alt="Depoimento da Samila">
+          </figure>
+
+          <p>E essas são apenas <em>3 pessoas</em> entre as milhares que ajudei em apenas 3 meses com o modelo de reels, de forma rápida e direta.</p>
+
+          <p>Isso me motivou tanto que decidi <strong>me desafiar no uso do meu próprio modelo</strong>.</p>
+
         </div>
       </div>
 
